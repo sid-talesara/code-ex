@@ -159,7 +159,7 @@ function App() {
                   {file.fileName}
                 </p>
               )}
-              {!file && (
+              {!file.fileName && (
                 <>
                   <p className="main-fileUpload-text inputtext">
                     Support files
