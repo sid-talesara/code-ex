@@ -5,6 +5,7 @@ import { storage } from "./firebase";
 import { ref, uploadBytes } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import jsPDF from "jspdf";
+import { BsFillCloudArrowUpFill, BsFillCloudCheckFill } from "react-icons/bs";
 
 //------------------- App Component -------------------
 function App() {
@@ -43,7 +44,7 @@ function App() {
     if (selectedLanguage.length > 0) {
       const fileRef = ref(storage, `code-files/${fileUpload.name + uuidv4()}`);
       uploadBytes(fileRef, fileUpload).then(() => {
-        console.log("image uploaded");
+        console.log("Document Uploaded to Firebase");
       });
       // ======= Piston Post API Call ======
       // Piston API: https://piston.readthedocs.io/en/latest/api-v2/
@@ -112,45 +113,87 @@ function App() {
   // ======= Functional Component Return Statement======
   return (
     <div className="app">
+      {/*  ======= NavBar ====== */}
       <header className="navbar">
-        <div className="navbar-logo">Codex</div>
+        <div className="navbar-logo">
+          <img
+            src="/assets/16353_3867287_580791_image-removebg-preview.svg"
+            alt="codex-logo"
+            className="codex-logo"
+          />
+        </div>
       </header>
+      {/*  ======= Hero Section====== */}
       <section className="hero">
         <h1 className="hero-title">Codex</h1>
-        <p className="hero-subtitle">Supported File Formats: .txt</p>
+        <p className="hero-subtitle">Run Code in the browser</p>
+        {/* <p className="hero-subtitle">Supported File Formats: .txt</p> */}
       </section>
       <section className="main">
-        <div className="file-input-container">
-          <input
-            type="file"
-            accept=".txt"
-            onChange={handleFileChange}
-            className="file-input"
-          />
-          <div className="dropdown-language">
-            <select
-              className="selected-language"
-              value={selectedLanguage}
-              onChange={handleLanguageChange}
+        {/*  ======= File Input Area ====== */}
+        {!apiData && (
+          <div className="file-input-container">
+            <div
+              className="file-upload-container"
+              onClick={() => {
+                document.querySelector("#file-input").click();
+              }}
             >
-              <option value="">Select a language</option>
-              <option value="javascript">JavaScript</option>
-              <option value="python">Python</option>
-              <option value="java">Java</option>
-              <option value="c++">C++</option>
-              <option value="c#">C#</option>
-              <option value="typeScript">TypeScript</option>
-              <option value="ruby">Ruby</option>
-              <option value="go">Go</option>
-              <option value="swift">Swift</option>
-              <option value="kotlin">Kotlin</option>
-            </select>
-            {selectedLanguage && <p>Selected language: {selectedLanguage}</p>}
+              {file && file.fileName ? (
+                <BsFillCloudCheckFill className="cloud-icon" />
+              ) : (
+                <BsFillCloudArrowUpFill className="cloud-icon" />
+              )}
+
+              <input
+                type="file"
+                accept=".txt"
+                onChange={handleFileChange}
+                className="file-input"
+                id="file-input"
+                required
+                hidden
+              />
+              {file && file.fileName && (
+                <p className="main-fileUpload-text inputtext">
+                  {file.fileName}
+                </p>
+              )}
+              {!file && (
+                <>
+                  <p className="main-fileUpload-text inputtext">
+                    Support files
+                  </p>
+                  <p className="info-fileUpload-text inputtext">.txt </p>
+                </>
+              )}
+            </div>
+            <div className="dropdown-language">
+              <select
+                className="selected-language"
+                value={selectedLanguage}
+                onChange={handleLanguageChange}
+              >
+                <option value="">Select a language</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="c++">C++</option>
+                <option value="c#">C#</option>
+                <option value="typeScript">TypeScript</option>
+                <option value="ruby">Ruby</option>
+                <option value="go">Go</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+              </select>
+              {selectedLanguage && <p>Selected language: {selectedLanguage}</p>}
+            </div>
+            <button className="upload-button" onClick={uploadCodeFile}>
+              Check Code
+            </button>
           </div>
-          <button className="upload-button" onClick={uploadCodeFile}>
-            Upload
-          </button>
-        </div>
+        )}
+        {/*  ======= Generated Report Table ====== */}
         {apiData && (
           <table className="result-table">
             <thead>
@@ -175,6 +218,10 @@ function App() {
           </table>
         )}
       </section>
+      {/*  ======= Footer ====== */}
+      <footer className="footer">
+        Codex &#169; 2023, Developed with ❤️ by Sid Talesara
+      </footer>
     </div>
   );
 }
