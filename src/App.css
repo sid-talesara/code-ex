@@ -1,0 +1,161 @@
+/* App.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #161616;
+  color: #fff;
+  text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #111;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0px 50px;
+}
+
+.codex-logo{
+  height:150px;
+}
+
+.btn{
+  background: none;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: ease-in 300ms all;
+}
+
+/* Hero Styles */
+.hero {
+  /* padding: 00px 0; */
+  text-align: center;
+  /* background-color: red; */
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Main Styles */
+.main {
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.file-upload-container {
+  margin: 10px;
+  padding: 100px;
+  border: 2px dashed rgba(245, 245, 245, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 350px;
+}
+.file-upload-container:hover {
+background-color: #40b5e71a;
+}
+.file-input{
+}
+ input {
+ text-align: center;
+}
+.dropdown-language {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+.inputtext{
+  margin: 0;
+  
+}
+.cloud-icon{
+  font-size: 60px;
+  opacity: 0.6;
+}
+.dropdown-language select {
+  padding: 10px 30px;
+  
+  border: none;
+  background-color: #111;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.upload-button {
+  padding: 10px 20px;
+  background-color:#40b5e7;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.upload-button:hover {
+  background-color: #0c0;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td {
+  padding: 10px;
+  border: 1px solid #999;
+}
+
+.result-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.download-button {
+  padding: 10px 30px;
+  background-color: #40b5e7;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.download-button:hover {
+  background-color: #40b5e7d5;
+}
+
+.footer{
+  font-size: 12px;
+  opacity: 0.6;
+}
+/* App.css */
+
