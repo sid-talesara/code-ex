@@ -1,6 +1,6 @@
 //------------------- imports -------------------
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { storage } from "./firebase";
 import { ref, uploadBytes } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";

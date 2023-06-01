@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Code-Ex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Codex is a web application designed to assist developers in their day-to-day activities. It provides a platform for executing and testing code snippets in various programming languages. Whether you're a beginner learning a new language or an experienced developer debugging code, Codex has got you covered.
 
-## Available Scripts
+## Use Cases
 
-In the project directory, you can run:
+- View and interact with a user-friendly web interface.
+- Upload and process code files in various programming languages.
+- Execute code snippets and receive results in real-time.
+- Generate PDF reports with code outputs and additional details.
 
-### `npm start`
+## App Details
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Code-Ex utilizes modern web technologies to provide a seamless user experience. The key features and technologies used in this application include:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React: A popular JavaScript library for building user interfaces.
+- Firebase: A cloud-based platform for hosting and managing data.
+- Piston API: An API service that executes code snippets in various programming languages.
+- jsPDF: A JavaScript library for generating PDF documents.
+- HTML, CSS, and JavaScript: Standard web development languages for creating the user interface and interactivity.
 
-### `npm test`
+## Local Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application locally, follow these steps:
 
-### `npm run build`
+##### 1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+git clone https://github.com/sid-talesara/code-ex.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### 2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd code-ex
+npm install
+```
 
-### `npm run eject`
+##### 3. Set up Firebase:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a new Firebase project.
+Update the Firebase configuration in `src/firebase/firebaseConfig.js` with your own Firebase project details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### 4. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### 5. Open your browser and navigate to `http://localhost:3000` to view the app.
 
-## Learn More
+## Additional Information
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is developed as part of the frontend web developer internship task for A2S Innovate Tech.
+Contributions, bug reports, and feature requests are welcome. Feel free to open an issue or submit a pull request.
+Contact information: sidtalesara@gmail.com
+Thank you for your interest in Code-Ex. Happy coding!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to use this combined `README.md` file for your GitHub repository and modify it further to suit your project's specific details and requirements.
