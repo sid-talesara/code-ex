@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import jsPDF from "jspdf";
 import { BsFillCloudArrowUpFill, BsFillCloudCheckFill } from "react-icons/bs";
 
-//------------------- App Component -------------------
+//------------------- App Component  -------------------
 function App() {
   // ======= UseStates Declarations ======
   const [fileUpload, setFileUpload] = useState(null);
